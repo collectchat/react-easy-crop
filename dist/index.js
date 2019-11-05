@@ -177,16 +177,16 @@ var Cropper = function (_React$Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       window.addEventListener('resize', this.computeSizes);
-      this.container.removeEventListener('wheel', this.onWheel)
       this.container.addEventListener('gesturestart', this.preventZoomSafari);
+      this.container.removeEventListener('wheel', this.onWheel)
       this.container.addEventListener('gesturechange', this.preventZoomSafari);
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       window.removeEventListener('resize', this.computeSizes);
-      this.container.addEventListener('wheel', this.onWheel, { passive: false })
       this.container.removeEventListener('gesturestart', this.preventZoomSafari);
+      this.container.addEventListener('wheel', this.onWheel, { passive: false })
       this.container.removeEventListener('gesturechange', this.preventZoomSafari);
       this.cleanEvents();
     }
