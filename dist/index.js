@@ -256,6 +256,7 @@ var Cropper = function (_React$Component) {
         {
           onMouseDown: this.onMouseDown,
           onTouchStart: this.onTouchStart,
+          onWheel: this.onWheel,
           innerRef: function innerRef(el) {
             return _this3.container = el;
           },
